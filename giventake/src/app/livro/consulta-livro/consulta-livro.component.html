@@ -1,0 +1,22 @@
+<h2>Ficamos muito felizes por tê-lo em nossa pequena biblioteca!!</h2>
+
+<div class="row mt-5 livro">
+    <div class="col-md-12">
+        <div *ngFor='let livro of listaLivro'> 
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-2 div" id="colN">
+                    <a class="text"> {{ livro.codLivro }} </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="text"> {{ livro.titulo }} </a>
+                </div>
+                <div class="col-md-3 div ">
+                    <button class="btn btn-outline " data-toggle="modal" data-target="#exampleModal"
+                        [routerLink]="['/consultaLivroCodigo',livro.codLivro]"> Saber mais </button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<h2>É sempre bom ter novos livros!</h2>
+
+<div>
+    <div class="row mt-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputEmail4">Título do livro</label>
+                    <input type="nome" class="form-control" id="inputEmail4" [(ngModel)]="livro.titulo" [ngModelOptions]="{standalone: true}" placeholder="Digite o título do livro">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputAddress">Autor</label>
+                    <input type="text" class="form-control" id="inputAddress" [(ngModel)]="livro.autor" [ngModelOptions]="{standalone: true}" placeholder="Digite o autor do livro">
+                    <span *ngIf='_msgErroA' >{{_msgErroA}}</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6">
+                    <select class="btn" id="tam" [(ngModel)]="livro.genero" [ngModelOptions]="{standalone: true}">
+                        <option value="Selecione">Selecione o gênero</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Infantil">Infantil</option>
+                        <option value="Suspense">Suspense</option>
+                        <option value="Comedia">Comédia</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Historia">História</option>
+                        <option value="Ficcao">Ficção</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label id="font" for="inputCity">Data de Aquisição</label>
+                    <input type="text" class="form-control" [(ngModel)]="livro.dataAquisicao"  [ngModelOptions]="{standalone: true}" id="inputCity"
+                        placeholder="dd/mm/aaaa">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mb-5" (click)="validacao()">Cadastrar</button>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<h2>É sempre bom ler novos livros!</h2>
+
+<form>
+    <div class="row mt-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputEmail4">Código do livro</label>
+                    <input type="nome" class="form-control" id="inputEmail4" [(ngModel)]="livro.codLivro" [ngModelOptions]="{standalone: true}" placeholder="Digite o código do livro a ser emprestado">
+                    <span *ngIf='_msgErroCL'>{{_msgErroCL}}</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputEmail4">Código do emprestante</label>
+                    <input type="nome" class="form-control" id="inputEmail4" [(ngModel)]="emprestante.codEmprestante"  [ngModelOptions]="{standalone: true}" placeholder="Digite o código do emprestante">
+                    <span *ngIf='_msgErroCE'>{{_msgErroCE}}</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputCity">Data de Nascimento</label>
+                    <input type="text" class="form-control" id="inputCity" [(ngModel)]="emprestimo.dataNasc" [ngModelOptions]="{standalone: true}" placeholder="dd/mm/aaaa">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputAddress">Responsável</label>
+                    <input type="text" class="form-control" id="inputAddress" [(ngModel)]="emprestimo.responsavel" [ngModelOptions]="{standalone: true}" placeholder="Digite o nome do responsável presente, caso o emprestante seja menor de 18 anos">
+                    <span *ngIf='_msgErroR'>{{_msgErroR}}</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputCity">Data de Devolução</label>
+                    <input type="text" class="form-control" id="inputCity" [(ngModel)]="emprestimo.dataDevolucao" [ngModelOptions]="{standalone: true}" placeholder="dd/mm/aaaa" disabled>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mb-5" (click)='validacao()'>Emprestar</button>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</form>

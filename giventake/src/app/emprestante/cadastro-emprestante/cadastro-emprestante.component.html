@@ -1,0 +1,73 @@
+<h2>Olá, é um prazer ter você por aqui!</h2>
+<h3>Agora você também é responsável por nossos livros</h3>
+
+<form>
+    <div class="row mt-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputEmail4">Emprestante</label>
+                    <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="emprestante.nomeEmprestante"
+                        [ngModelOptions]="{standalone: true}" maxlength="100"
+                        placeholder="Digite o nome do emprestante">
+                    <span *ngIf='_msgErroN'>{{_msgErroN}}</span>
+                </div>
+            </div>
+            <div class="form-check ml-4">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" [(ngModel)]="emprestante.tipo1"  value="Aluno"
+                    checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Aluno
+                </label>
+            </div>
+            <div class="form-check ml-4">
+                <input class="form-check-input" type="radio" name="exampleRadios" [(ngModel)]="emprestante.tipo1"  id="exampleRadios2"
+                    value="Responsavel">
+                <label class="form-check-label" for="exampleRadios2">
+                    Responsável
+                </label>
+            </div>
+            <div class="form-check ml-4 mb-2" id="radios">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" [(ngModel)]="emprestante.tipo1"  value="Conhecido">
+                <label class="form-check-label" for="exampleRadios3">
+                    Conhecido
+                </label>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label id="font" for="inputAddress">Contato</label>
+                    <input type="tel" class="form-control" [(ngModel)]="emprestante.contato" [ngModelOptions]="{standalone: true}"
+                        [ngModelOptions]="{standalone: true}" maxlength="11" id="inputAddress"
+                        placeholder="Digite um número para contato">
+                    <span *ngIf='_msgErroC'>{{_msgErroC}}</span>
+                </div>
+                <div class="col-md-6">
+                    <label id="font" for="inputAddress2">Data de Nascimento</label>
+                    <input type="text" class="form-control" id="inputAddress2" [(ngModel)]="emprestante.dataNasc" [ngModelOptions]="{standalone: true}"
+                        placeholder="dd/mm/aaaa">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputCity">Aluno Referencia</label>
+                    <input type="text" class="form-control" id="inputCity" [(ngModel)]="emprestante.alunoReferencia" [ngModelOptions]="{standalone: true}"
+                        maxlength="100"
+                        placeholder="Digite o nome do aluno referencia para o emprestante, caso o mesmo não seja aluno">
+                    <span *ngIf='_msgErroAR'>{{_msgErroAR}}</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputCity">Responsável</label>
+                    <input type="text" class="form-control" id="inputCity" [(ngModel)]="emprestante.responsavel" [ngModelOptions]="{standalone: true}"
+                        maxlength="100"
+                        placeholder="Digite o nome do responsável, caso emprestante seja menor que 18 anos">
+                    <span *ngIf='_msgErroR'>{{_msgErroR}}</span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mb-5" (click)="validacao()">Cadastrar</button>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</form>

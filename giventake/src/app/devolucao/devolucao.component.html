@@ -1,0 +1,25 @@
+<h2>Agradecemos por devolver o livro!</h2>
+<h3>Agora outras pessoas também conhecerão essa maravilhosa história</h3>
+
+<form>
+    <div class="row mt-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputEmail4">Código do livro</label>
+                    <input type="nome" class="form-control" id="inputEmail4" [(ngModel)]="devolucao.codLivro" [ngModelOptions]="{standalone: true}" placeholder="Digite o código do livro a ser devolvido">
+                    <span *ngIf='_msgErroCL'>{{_msgErroCL}}</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label id="font" for="inputCity">Data de Devolução</label>
+                    <input type="text" class="form-control" [(ngModel)]="devolucao.dataDevolucao" [ngModelOptions]="{standalone: true}" placeholder="dd/mm/aaaa" id="inputCity" >
+                </div>
+            </div>
+            <button type="submit" class="btn" (click)="validacao()">Devolver</button>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</form>

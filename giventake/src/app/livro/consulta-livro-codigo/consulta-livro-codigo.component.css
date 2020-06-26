@@ -1,0 +1,30 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+#font{
+    color: cadetblue;
+    font-style: oblique;
+    font-weight: bold;
+}
+button{
+    margin-left: 45%;
+}
+h2, h3{
+    color: rgb(0, 153, 255);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2%;
+}
+#tam{
+    padding: 1.5%;
+    padding-right: 50px;
+    background-color: cadetblue;
+}
+.btn{
+    background-color: cadetblue;
+    color: black;
+}
+span{
+    color: brown;
+}
