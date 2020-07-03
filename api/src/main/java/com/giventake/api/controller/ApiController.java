@@ -1,5 +1,7 @@
 package com.giventake.api.controller;
 
+
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import com.giventake.api.model.Emprestante;
@@ -15,6 +18,7 @@ import com.giventake.api.model.Livro;
 import com.giventake.api.structure.Database;
 @CrossOrigin("*")
 @RestController
+@CrossOrigin("*")
 public class ApiController {
 	private Database database = new Database();
 	
@@ -34,6 +38,7 @@ public class ApiController {
 	public ResponseEntity<String> consultarLivros() {
 		return ResponseEntity.ok(database.consultarLivros());
 	}
+
 	
 	@PutMapping("/Livro/Emprestar")
 	public ResponseEntity<Livro> emprestarLivro(@RequestBody Livro livro) {
@@ -108,8 +113,3 @@ public class ApiController {
 
 
 
-//	@GetMapping("/Livro/Todos")
-//	public ResponseEntity<ArrayList<Livro>> consultarLivro() {
-//		return ResponseEntity.ok(database.consultarLivros());
-//	}
-//	

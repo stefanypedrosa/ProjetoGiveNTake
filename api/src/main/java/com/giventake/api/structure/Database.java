@@ -1,12 +1,15 @@
 package com.giventake.api.structure;
 
 
+
+
 import com.giventake.api.model.Emprestante;
 import com.giventake.api.model.Emprestimo;
 import com.giventake.api.model.Livro;
 import com.giventake.api.structure.list.ListEmprestante;
 import com.giventake.api.structure.list.ListEmprestimo;
 import com.giventake.api.structure.list.ListLivro;
+
 
 public class Database {
 	private ListEmprestante ListEmprestante;
@@ -44,6 +47,7 @@ public class Database {
 	public String consultarLivros() {
 		return ListLivro.consultarLivros();
 	}
+	
 	
 	public int quantidadeLivros() {
 		return ListLivro.tamanhoLista();
@@ -100,21 +104,4 @@ public class Database {
 
 
 
-//public ArrayList<Livro> consultarLivros() {
-//ArrayList<Livro> lista = new ArrayList<Livro>();
-//NodeLivro tmp;
-//tmp = ListLivro.getInicio();
-//do {
-//	/*System.out.println("Elemento da Lista: " + tmp.getElemento().getCodLivro() 
-//				+ "\n" + tmp.getElemento().getTitulo()
-//				+ "\n" + tmp.getElemento().getAutor()
-//				+ "\n" + tmp.getElemento().getGenero()
-//				+ "\n" + tmp.getElemento().getDataAquisicao()
-//				+ "\n" + tmp.getElemento().isDisponivel()
-//				+ "\n" + tmp.getAnterior().toString()
-//				+ "\n" + tmp.getProximo().toString());*/
-//	lista.add(tmp.getElemento());
-//	tmp = tmp.getProximo();
-//} while(tmp != ListLivro.getInicio());
-//return lista;
-//}
+
