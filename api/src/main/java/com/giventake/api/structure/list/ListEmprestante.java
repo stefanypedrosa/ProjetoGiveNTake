@@ -62,15 +62,7 @@ public class ListEmprestante {
 		return resultado.getElemento();
 	}
 
-//	public void emprestarLivro(int codigo) {
-//		NodeLivro resultado = buscarPosicao(codigo);
-//		resultado.getElemento().setStatus("Emprestado");
-//	}
-//	
-//	public void devolverLivro(int codigo) {
-//		NodeLivro resultado = buscarPosicao(codigo);
-//		resultado.getElemento().setStatus("Disponível");
-//	}
+
 
 	public void removerFinal() {
 		if(isEmpty()) {
