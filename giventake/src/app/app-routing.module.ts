@@ -10,6 +10,7 @@ import {ConsultaLivroComponent} from './livro/consulta-livro/consulta-livro.comp
 import {EmprestimoComponent} from './emprestimo/emprestimo.component';
 import {DevolucaoComponent} from './devolucao/devolucao.component';
 import {ConsultaLivroCodigoComponent} from './livro/consulta-livro-codigo/consulta-livro-codigo.component';
+import {ConsultaEmprestanteCodigoComponent} from './emprestante/consulta-emprestante-codigo/consulta-emprestante-codigo.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'emprestimo', component: EmprestimoComponent},
   {path: 'devolucao', component: DevolucaoComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'consultaLivroCodigo/:id', component: ConsultaLivroCodigoComponent}
+  {path: 'consultaLivroCodigo/:id', component: ConsultaLivroCodigoComponent},
+  {path: 'consultaEmprestanteCodigo/:id', component: ConsultaEmprestanteCodigoComponent}
 ]
 
 @NgModule({

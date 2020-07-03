@@ -26,11 +26,18 @@ export class WeblistServiceService {
   public cadastraE(emprestante: Emprestante) {
     return this.http.post("http://localhost:8080/Emprestante", emprestante);
   }
+  public consultaE(codEmprestante: number) {
+    return this.http.get(`http://localhost:8080/Emprestante/${codEmprestante}`);
+  }
+  public consultaTodos() {
+    return this.http.get("http://localhost:8080/Emprestante/Todos")
+  }
 
   //backend emprestimo e devolucao
   public empresta(emprestimo:Emprestimo){
     return this.http.post("http://localhost:8080/Emprestimo", emprestimo)
   }
+  
 
   //backend devolucao
   public devolve(livro:Livro){

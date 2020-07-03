@@ -15,7 +15,7 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label id="font" for="inputCity">Data de Devolução</label>
-                    <input type="text" class="form-control" [(ngModel)]="devolucao.dataDevolucao" [ngModelOptions]="{standalone: true}" placeholder="dd/mm/aaaa" id="inputCity" >
+                    <input type="text" class="form-control" maxlength="10" [(ngModel)]="devolucao.dataDevolucao" [ngModelOptions]="{standalone: true}" placeholder="dd/mm/aaaa" id="inputCity" >
                 </div>
             </div>
             <button type="submit" class="btn" (click)="validacao()">Devolver</button>

@@ -40,7 +40,7 @@ export class EmprestimoComponent implements OnInit {
     this.dia = this.data.getDate() + 7;
     if (this.dia >= 30) {
       this.dia = this.dia - 30;
-      this.mes = this.data.getMonth() + 3;
+      this.mes = this.data.getMonth() + 2;
       if (this.mes > 12) {
         this.mes = 1;
         this.ano = this.data.getFullYear() + 1;

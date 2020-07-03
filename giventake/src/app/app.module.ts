@@ -16,6 +16,7 @@ import { DevolucaoComponent } from './devolucao/devolucao.component';
 import { EmprestimoComponent } from './emprestimo/emprestimo.component';
 import { FormsModule } from '@angular/forms';
 import { ConsultaLivroCodigoComponent } from './livro/consulta-livro-codigo/consulta-livro-codigo.component';
+import { ConsultaEmprestanteCodigoComponent } from './emprestante/consulta-emprestante-codigo/consulta-emprestante-codigo.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ConsultaLivroCodigoComponent } from './livro/consulta-livro-codigo/cons
     ConsultaEmprestanteComponent,
     DevolucaoComponent,
     EmprestimoComponent,
-    ConsultaLivroCodigoComponent
+    ConsultaLivroCodigoComponent,
+    ConsultaEmprestanteCodigoComponent
   ],
   imports: [
     BrowserModule,

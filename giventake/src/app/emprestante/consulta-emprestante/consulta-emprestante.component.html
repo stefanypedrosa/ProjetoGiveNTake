@@ -1,1 +1,22 @@
-<p>consulta-emprestante works!</p>
+<h2>Conheça nossos emprestante!!</h2>
+
+<div class="row mt-5 livro">
+    <div class="col-md-12">
+        <div *ngFor='let emprestante of listaEmprestante'> 
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-2 div" id="colN">
+                    <a class="text"> {{ emprestante.codEmprestante }} </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="text"> {{ emprestante.nomeEmprestante }} </a>
+                </div>
+                <div class="col-md-3 div ">
+                    <button class="btn btn-outline " data-toggle="modal" data-target="#exampleModal"
+                        [routerLink]="['/consultaEmprestanteCodigo',emprestante.codEmprestante]"> Conhecer </button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<app-consulta-emprestante></app-consulta-emprestante>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content estilizicao">
+            <div class="modal-header ">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" [routerLink]="'/consultaEmprestante'" data-dismiss="modal"
+                    aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label id="font" for="inputEmail4">Código do Emprestante</label>
+                                    <input type="text" class="form-control" id="inputEmail4"
+                                        [(ngModel)]="emprestante.codEmprestante" [ngModelOptions]="{standalone: true}"
+                                        maxlength="100" placeholder="Digite o nome do emprestante" disabled>
+                                    <span *ngIf='_msgErroN'>{{_msgErroN}}</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label id="font" for="inputEmail4">Emprestante</label>
+                                    <input type="text" class="form-control" id="inputEmail4"
+                                        [(ngModel)]="emprestante.nomeEmprestante" [ngModelOptions]="{standalone: true}"
+                                        maxlength="100" placeholder="Digite o nome do emprestante" disabled>
+                                    <span *ngIf='_msgErroN'>{{_msgErroN}}</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label id="font" for="inputAddress">Contato</label>
+                                    <input type="tel" class="form-control" [(ngModel)]="emprestante.contato"
+                                        [ngModelOptions]="{standalone: true}" [ngModelOptions]="{standalone: true}"
+                                        maxlength="11" id="inputAddress" placeholder="Digite um número para contato" disabled>
+                                    <span *ngIf='_msgErroC'>{{_msgErroC}}</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <label id="font" for="inputAddress2">Data de Nascimento</label>
+                                    <input type="text" class="form-control" id="inputAddress2"
+                                        [(ngModel)]="emprestante.dataNasc" [ngModelOptions]="{standalone: true}"
+                                        placeholder="dd/mm/aaaa" disabled>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label id="font" for="inputCity">Aluno Referencia</label>
+                                    <input type="text" class="form-control" id="inputCity"
+                                        [(ngModel)]="emprestante.alunoReferencia" [ngModelOptions]="{standalone: true}"
+                                        maxlength="100"
+                                        placeholder="Aluno" disabled>
+                                    <span *ngIf='_msgErroAR'>{{_msgErroAR}}</span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label id="font" for="inputCity">Responsável</label>
+                                    <input type="text" class="form-control" id="inputCity"
+                                        [(ngModel)]="emprestante.responsavel" [ngModelOptions]="{standalone: true}"
+                                        maxlength="100"
+                                        placeholder="Emprestante maior de 18 anos" disabled>
+                                    <span *ngIf='_msgErroR'>{{_msgErroR}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

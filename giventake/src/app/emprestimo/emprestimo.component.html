@@ -21,7 +21,7 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label id="font" for="inputCity">Data de Nascimento</label>
-                    <input type="text" class="form-control" id="inputCity" [(ngModel)]="emprestimo.dataNasc" [ngModelOptions]="{standalone: true}" placeholder="dd/mm/aaaa">
+                    <input type="text" class="form-control" id="inputCity" maxlength="10" [(ngModel)]="emprestimo.dataNasc" [ngModelOptions]="{standalone: true}" placeholder="dd/mm/aaaa">
                 </div>
             </div>
             <div class="form-row">

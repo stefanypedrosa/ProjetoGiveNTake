@@ -1,28 +1,37 @@
 <div class="col-md-12">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
     <a class="navbar-brand" href="#"><img src="../../assets/imagens/logo.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/cadastroEmprestante'">Emprestante</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Emprestantes
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link" [routerLink]="'/cadastroEmprestante'">Cadastro</a>
+            <a class="nav-link" [routerLink]="'/consultaEmprestante'">Consulta</a>
+          </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             Livros
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" [routerLink]="'/cadastroLivro'">Cadastro</a>
-            <a class="dropdown-item" [routerLink]="'/consultaLivro'">Consulta</a>
+            <a class="nav-link" [routerLink]="'/cadastroLivro'">Cadastro</a>
+            <a class="nav-link" [routerLink]="'/consultaLivro'">Consulta</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" [routerLink]="'/emprestimo'">Empréstimo</a>
-            <a class="dropdown-item" [routerLink]="'/devolucao'">Devolução</a>
+            <a class="nav-link" [routerLink]="'/emprestimo'">Empréstimo</a>
+            <a class="nav-link" [routerLink]="'/devolucao'">Devolução</a>
           </div>
         </li>
         <li class="nav-item">

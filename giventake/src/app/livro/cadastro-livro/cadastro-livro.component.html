@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label id="font" for="inputCity">Data de Aquisição</label>
-                    <input type="text" class="form-control" [(ngModel)]="livro.dataAquisicao"  [ngModelOptions]="{standalone: true}" id="inputCity"
+                    <input type="text" class="form-control" maxlength="10" [(ngModel)]="livro.dataAquisicao"  [ngModelOptions]="{standalone: true}" id="inputCity"
                         placeholder="dd/mm/aaaa">
                 </div>
             </div>

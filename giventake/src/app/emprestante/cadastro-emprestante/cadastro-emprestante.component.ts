@@ -80,7 +80,7 @@ export class CadastroEmprestanteComponent implements OnInit {
       this.emprestante.alunoReferencia = null;
       this.emprestante.responsavel = null;
       this.emprestante.tipo1 = "Aluno";
-      this.router.navigate(['home']);
+      this.router.navigate(['consultaEmprestante']);
       },
         error => {
           this._msgEnviarE = "Erro ao enviar dados!!";
